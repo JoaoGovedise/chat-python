@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(0, 170, 255);</string>
+   <string notr="true">background-color: rgb(211, 211, 211);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButton">
@@ -34,7 +34,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(46, 255, 242);
+     <string notr="true">background-color: rgb(255, 255, 255);
 border-style: outset;
 border-width: 2px;
 border-radius: 15px;
@@ -116,7 +116,7 @@ border-width: 2px;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 170, 0);</string>
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Cadastrar</string>
@@ -169,7 +169,7 @@ border-width: 2px;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 127);</string>
+     <string notr="true">color: rgb(247, 41, 41);</string>
     </property>
     <property name="text">
      <string/>

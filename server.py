@@ -1,5 +1,7 @@
 import socket
 import threading
+import sqlite3
+
 
 
 HOST = '127.0.0.1'
@@ -18,16 +20,25 @@ def passar(mensagem):
         client.send(mensagem)
 
     
-
-
 def handle(client):
     while True:
         try:
             mensagem = client.recv(1024)
             mensagem = mensagem.decode('utf-8')
-            palavra = "unip"
-            mensagem = mensagem.replace(palavra, '****')
+
+            palavra = []
+            banco = sqlite3.connect('banco_palavras.db') 
+            cursor = banco.cursor()
+            cursor.execute("CREATE TABLE IF NOT EXISTS palavras (palavra text)")
+
+            cursor.execute("SELECT * FROM palavras")
+            for linha in cursor.fetchall():
+                palavra.append(linha[0])
+
+            for x in palavra:
+                mensagem = mensagem.replace(x, '****')
             print( f"{mensagem}")
+
             mensagem = mensagem.encode('utf-8')
             passar(mensagem)
         except:
